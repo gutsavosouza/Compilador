@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.text.Text?>
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.compilador.MainController">
+    <top>
+        <MenuBar>
+            <Menu text="Arquivo">
+                <MenuItem onAction="#handleButaoAbrirArquivo" text="Abrir" />
+                <MenuItem fx:id="butaoSalvarArquivo" onAction="#handleButaoSalvarArquivo" disable="true" text="Salvar"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <left>
+        <VBox alignment="TOP_CENTER" spacing="10">
+            <Button fx:id="butaoAbrirArquivo" maxWidth="Infinity" onAction="#handleButaoAbrirArquivo" text="Abrir arquivo" />
+            <Button fx:id="butaoAnaliseSintatica" maxWidth="Infinity" onAction="#handleButaoAnaliseSintatica" text="Análise Sintática" />
+            <Button fx:id="butaoGerarAST" maxWidth="Infinity" onAction="#handleButaoGerarAST" text="Gerar AST" />
+            <Button fx:id="butaoAnaliseContextual" maxWidth="Infinity" onAction="#handleButaoAnaliseContextual" text="Análise Contextual" />
+            <Button fx:id="butaoGerarCodigo" maxWidth="Infinity" onAction="#handleButaoGerarCodigo" text="Gerar Código"/>
+        </VBox>
+    </left>
+    <center>
+        <BorderPane>
+            <center>
+                <TabPane>
+                    <Tab fx:id="tabVerArquivoFonte" closable="false" text="Arquivo fonte">
+                        <TextArea fx:id="textoCodigoFonte" editable="false" text="Código Fonte" />
+                    </Tab>
+                    <Tab fx:id="tabVerAST" closable="false" text="Abstract Syntax Tree">
+                        <TreeView fx:id="treeView">
+                            <TreeItem fx:id="ast" value="Abstract Syntax Tree">
+                            </TreeItem>
+                        </TreeView>
+                    </Tab>
+                    <Tab fx:id="tabGerarCodigo" closable="false" disable="true" text="Código compilado">
+                        <TextArea fx:id="textoCodigoGerado" text="Codigo compilado" editable="false"/>
+                    </Tab>
+                </TabPane>
+            </center>
+            <bottom>
+                <TextArea fx:id="logDoCompilador" editable="false" maxHeight="100" text="Log do compilador"/>
+            </bottom>
+        </BorderPane>
+    </center>
+</BorderPane>

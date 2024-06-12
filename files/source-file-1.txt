@@ -1,0 +1,11 @@
+program p;
+    var x : float;
+    var y : boolean;
+    var z : float;
+begin
+   if x > z then
+        while z < 10 do
+                z := z * 1.15
+   else
+        y := false;
+end

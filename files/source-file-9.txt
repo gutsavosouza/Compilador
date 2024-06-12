@@ -1,0 +1,8 @@
+program p;
+    var x : integer;
+    var y : integer;
+    var z : boolean;
+    var w : integer;
+begin
+    x := y + 2;
+end

@@ -1,0 +1,15 @@
+    program p;
+    var x : integer;
+    var y : boolean;
+    var z : integer;
+begin
+   if x > z then
+        while x < z do
+            begin
+                x := z + 2;
+                y := false;
+            end
+   else
+        y := true;
+   # um outro comentario
+end

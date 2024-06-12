@@ -1,0 +1,39 @@
+# isso é um comentário
+program
+identifer
+123
+123.2
+.2
+.
+0.
+integer
+boolean
+float
+true
+false
+begin
+end
+if
+then
+else
+var
+and
+or
+while
+do
+:= :
+;
+(
+)
++
+-
+*
+/
+>
+<
+=
+else
+
+&
+%
+% @@

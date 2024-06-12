@@ -1,0 +1,10 @@
+program p;
+    var x : integer;
+    var y : float;
+    var z : boolean;
+    var w : integer;
+begin
+    x := 2 * 10 + 2;
+    x := 2 + 1;
+    # teste
+end

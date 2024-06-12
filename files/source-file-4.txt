@@ -1,0 +1,14 @@
+program prog;
+    var x : integer;
+    var y : integer;
+    var z : integer;
+begin
+    if x > 2 then
+        x := x - 1;
+    while x < 2 do
+        y := y + 1;
+    if 4 + x  > z then
+        z := y + x
+    else
+        z := y - x;
+end

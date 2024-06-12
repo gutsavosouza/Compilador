@@ -1,0 +1,5 @@
+program p;
+    var x : float;
+begin
+   x := (1 + 2) * 8;
+end
