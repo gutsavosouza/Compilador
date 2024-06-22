@@ -1,5 +1,7 @@
 package main.compilador.cmp.analisador.contextual;
 
+import main.compilador.cmp.ast.declaracao.DeclaracaoVariavel;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,17 +16,19 @@ public class IdentificationTable {
         this.addresses = new ArrayList<>();
     }
 
-    public void enter(String id, String tipo, short address){
+    public void enter(DeclaracaoVariavel declaracaoVariavel) {
         Type type;
-        switch (tipo) {
+
+        switch(declaracaoVariavel.tipo.spelling) {
             case "integer" -> type = Type.type_integer;
             case "float" -> type = Type.type_float;
             case "boolean" -> type = Type.type_bool;
             default -> type = Type.type_error;
         }
-        ids.add(id);
+
+        ids.add(declaracaoVariavel.id.spelling);
         tipos.add(type);
-        addresses.add(address);
+        addresses.add(declaracaoVariavel.address);
     }
 
     public Type retrieve(String id) {

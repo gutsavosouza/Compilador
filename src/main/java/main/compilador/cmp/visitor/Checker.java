@@ -172,7 +172,8 @@ public class Checker implements Visitor {
             declaracaoVariavel.tipo.visit(this);
 
             if(idTable.retrieve(declaracaoVariavel.id.spelling) == null) {
-                idTable.enter(declaracaoVariavel.id.spelling, declaracaoVariavel.tipo.spelling, varAddr);
+                declaracaoVariavel.address = varAddr;
+                idTable.enter(declaracaoVariavel);
                 varAddr++; // indo para o proximo endereço
             } else {
                 this.contextError = true;

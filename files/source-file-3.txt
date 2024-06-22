@@ -1,6 +1,5 @@
 program p;
     var x : integer;
-    var y : float;
     var z : boolean;
     var w : integer;
 begin
